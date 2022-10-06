@@ -1,0 +1,6 @@
+#include "game.h"
+#include "../board/board.ih"
+#include "../shared/enum.h"
+#include "../strategies/strategies.ih"
+
+#include<iostream>   // for debugging
