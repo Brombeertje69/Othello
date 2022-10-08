@@ -12,4 +12,4 @@ if __name__ == "__main__":
     #game = Game(show_moves = True)
     #game.play(1)
     game = Game()
-    game.play(1)
+    game.play(10)

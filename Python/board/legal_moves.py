@@ -14,5 +14,5 @@ def legal_moves(board, player):
       squares = [sq for sq, value in enumerate(board) if value == player]
       moves = [find_legal_move(board, sq, player) for sq in squares]
       moves = list(set(itertools.chain(*moves)))
-
+      #moves.sort()
       return moves

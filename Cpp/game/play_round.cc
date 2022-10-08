@@ -9,7 +9,7 @@ int Game::play_round()
     bool has_passed = false;
     char player = BLACK;
 
-    print_board(board);
+    //print_board(board);
 
     while (true)
     {
@@ -17,8 +17,9 @@ int Game::play_round()
         
         if (move != 0)
         {
+
             std::cout << "player: " << (char)player 
-                      << "\t move:" << move << '\n';
+                     << "\t move:" << move << '\n';
             make_move(move, player, board);
             has_passed = false;
             //print_board(board);         //uncomment to see every move

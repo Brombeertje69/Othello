@@ -19,7 +19,8 @@ Move minimax(char player, char* board, char maximizer,
     {
         std::vector<int> moves = legal_moves(player, board);
 
-         std::cout << "depth:" << depth << '\n';
+        /*
+        std::cout << "depth:" << depth << '\n';
         std::cout << '\n' << "Legal: ";
         for (int elem : moves)
         {
@@ -27,7 +28,7 @@ Move minimax(char player, char* board, char maximizer,
         }
         std::cout << '\n';
         sleep(1);
-        
+        */
         
         if (moves.size() != 0)
         {
@@ -39,7 +40,7 @@ Move minimax(char player, char* board, char maximizer,
             {
                 //std::cout << '\n' <<"Testing: " << move << '\n';
                 //sleep(1);
-                char copy[100];                //reserve array for the copy
+                char copy[100];                // reserve array for the copy
                 strcpy(copy, board);           // copy the board to keep track
 
                 make_move(move, player, copy); 
@@ -50,7 +51,8 @@ Move minimax(char player, char* board, char maximizer,
 
                 if (score > best_score)
                 {
-                 best_move = {move, score};
+                    best_score = score;         // update the best score
+                    best_move = {move, score};
                 }
             }
 
@@ -63,7 +65,7 @@ Move minimax(char player, char* board, char maximizer,
 
     best_move.value = -best_move.value; //Return the negative value 
 
-        
+    /*
     if (depth < 5)
     {
         //sleep(1);
@@ -71,7 +73,7 @@ Move minimax(char player, char* board, char maximizer,
         std::cout << "best move: " << best_move.move << '\n';
         std::cout << "best value: " << best_move.value << '\n';
     }
-    
+    */    
 
     return best_move;
 }

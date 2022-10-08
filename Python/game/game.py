@@ -48,8 +48,8 @@ class Game():
         while True:
             move = self.__get_move() #obtain the moves
             if move is not None:
-                print(self.player, move)
-                print("Player: ",self.player, "\t Move: ", move , '\n')
+                #print(self.player, move)
+                #print("Player: ",self.player, "\t Move: ", move , '\n')
                 #time.sleep(1)
                 board.make_move(self.board, move, self.player, show_moves = self.show_moves) # update the field, go next player
                 self.previous_passed = False
@@ -76,8 +76,8 @@ class Game():
         #NB: Need to pass the instance of the board
         move = None
         if self.player == WHITE: # or self.player == BLACK:
-            _, move = Minimax(self.board, self.player, max_depth = 1)
-            #move = Random_choice(self.board, self.player)
+            #_, move = Minimax(self.board, self.player, max_depth = 1)
+            move = Random_choice(self.board, self.player)
         elif self.player == BLACK:
             _, move = Minimax(self.board, self.player)
         return move
